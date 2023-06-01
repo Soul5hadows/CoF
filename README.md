@@ -1,2 +1,2 @@
 # CoF
-City of Forsaken. A Battle Royale game written in C.
+City of Forsaken is a roguelike battle royale game, set in a city where multiple factions with their own ultimatums vie for control. Some seek to control the city to strengthen their forces, others wish to destroy these forces. Some are hired guns carrying out contracts. Military men set out to protect their country. The Churches have one goal, to vanquish all demons. Shady individuals prowl the streets in search of riches amongst danger. There are multiple game modes, and a varied amount of factions with unique traits to pick from.
