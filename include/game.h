@@ -1,6 +1,5 @@
 #ifndef GAME_H
 #define GAME_H
-#include <curses.h>
 #include "ecs.h"
 #include "tilesystem.h"
 

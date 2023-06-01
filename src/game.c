@@ -11,16 +11,11 @@ void update(Game *);
 void draw(Game *);
 void init(Game *game)
 {
-  initscr();
-  curs_set(0);
-  noecho();
-  if (terminal_open())
-    printw("Succesful Initialization");
-
   game->handle_events = handle_events;
   game->update = update;
   game->draw = draw;
-  game->is_running = true;
+  if (terminal_open())
+    game->is_running = true;
   game->manager = Init_Entity_Manager();
 
   tilesystem = Init_Tile_System();
@@ -36,7 +31,6 @@ void init(Game *game)
 
   clean_manager(game->manager);
   free(tilesystem);
-  endwin();
   terminal_close();
 }
 
@@ -47,8 +41,7 @@ void handle_events(Game *game)
 
 void update(Game *game)
 {
-  clear();
-
+  /*
   Entity *arr = fetch_with(game->manager, 2, POSITION, SPRITE);
   if (arr)
   {
@@ -56,15 +49,14 @@ void update(Game *game)
     {
       Position *trs = (Position *)return_component(game->manager, arr[i], POSITION);
       Sprite *spr = (Sprite *)return_component(game->manager, arr[i], SPRITE);
-      mvaddch(trs->coordinate.y, trs->coordinate.x, spr->sprite);
     }
     free(arr);
   }
+  */
 }
 
 void draw(Game *game)
 {
-  refresh();
 }
 
 void run(void)
@@ -115,7 +107,7 @@ void player_movement(Game *game)
 {
   Input *pi = (Input *)return_component(game->manager, 0, INPUT);
   Position *pt = (Position *)return_component(game->manager, 0, POSITION);
-  pi->input = getch();
+  pi->input = 'q';
   switch (pi->input)
   {
   case '4':
