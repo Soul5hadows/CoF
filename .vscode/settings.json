@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "components.h": "c"
+    },
+    "editor.fontSize": 12
+}
