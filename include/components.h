@@ -4,16 +4,9 @@
 
 typedef enum
 {
-  INPUT = 1, SPRITE, STATE, STATUS, TRANSFORM, POSITION, PHYSICS, CHEMICAL, AUDIO, PHYSICAL, VISUAL, AI, INTERACTION
+  INPUT = 1, SPRITE, STATE, STATUS, TRANSFORM, POSITION, PHYSICS, PHYSICAL, CHEMICAL, AUDIO, VISUAL, AI, INTERACTION
 }COMPONENT_LIST;
 
-/*
-INPUT- Only the player has this. It deals with device input. SPRITE- Dictates the visual representation of an entity. Works well with the state component. STATE- Stores an entity's current action, animation, and behaviour.
-STATUS- Tracks the abstract concept of an entity, its class, attributes, race, information, etc. TRANSFORM- Stores position data and provides the ability to move and to be moved. Pairs with the physics component with the rigid flag.
-PHYSICS- Allows the entity to be influenced by the physics system. CHEMICAL- Provides the chemical properties of an entity and its ability to have chemical reactions. Perfect for alchemy.
-AUDIO- Adds the ability to both perceive and create sound with flags. PHYSICAL- Has information about the owner's material and its ability to sense physically. VISUAL- An entity's capability to see and be seen, with the use of flags.
-AI- Adds the ability to be controlled by the AI system. INTERACTION- The ability of an entity to interact with its enviroment and with others.
-*/
 typedef struct
 {
   double x;
